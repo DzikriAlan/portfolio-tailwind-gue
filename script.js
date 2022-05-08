@@ -24,7 +24,7 @@ hamburger.addEventListener('click', function () {
 })
 
 window.addEventListener('click', function (e) {
-    if (e.target != hamburger & e.target != fixedNav) {
+    if (e.target != hamburger && e.target != fixedNav) {
         hamburger.classList.remove('hamburger-active');
         fixedNav.classList.add('hidden');
     }
