@@ -1,0 +1,82 @@
+/* ********************************************************************************************************************************************** */
+                                                            /* :link :hover :active :visited */
+
+.hello:link{
+    /* link    -  style default pada sebuah link (a yang memiliki href) */
+    color: orange;
+}
+
+.hello:hover{
+    /* hover   - ketika kursor mause berada diatas sebuah link/elemen */
+    color:green;
+    font-family:arial;
+    font-size: 20px;
+}
+
+.hello:active{
+    /* active  - style ketika sebuah link di klik (keadaan aktif/ di klik tekan) */
+    font-style: italic;
+}
+hello:visited{
+    /* visited - style ketika sebuah link sudah pernah dikunjungi sebelumnya (menggunakan browser yang */
+    color:red;
+}
+/* ********************************************************************************************************************************************** */
+                                                            /* :first-child :last-child :nth-child(n) */
+        
+/* last-child  = memilih elemen terakhir dari sebuah parent (elemen pembungkusnya) */
+/* nth-child(n) = memilih elemen ke-n dari sebuah parent (elemen pembungkusnya)  */
+
+li:first-child a{
+    /* first-child = memilih elemen pertama dari sebua parent (elemen pembungkusnya) */
+
+    /* CARA BACA : css tolong elemen a yang pertama dari tag li, dikasih warna hijau */
+    color:green;
+}
+
+li:last-child a{
+    /* last-child = memilih elemen terakhir dari sebua parent (elemen pembungkusnya) */
+    
+    /* CARA BACA : css tolong elemen a yang terakhir dari tag li, dikasih warna biru */
+    color:blue;
+}
+
+li:nth-child(2) a{
+    /* nth-child(n) = memilih elemen ke-n dari sebuah parent (elemen pembungkusnya) */
+    
+    /* CARA BACA : css tolong elemen a yang ke - n dari tag li, dikasih warna kuning */
+    color:yellow;
+}
+/* ********************************************************************************************************************************************** */
+                                                            /* :first-of-type :last-of-type */
+                                                
+li:first-of-type{
+    /* first-of-type = memilih elemen pertama dari sebuah jenis/tipe tag */
+
+    /* CARA BACA : css tolong elemen pertama dari li dikasih warna hijau */
+    color:green;
+}            
+
+li:last-of-type{
+    /* last-of-type = memilih elemen terkahir dari sebuah jenis/tipe tag */
+
+    /* CARA BACA : css tolong elemen terakhir dari li dikasih warna biru */
+    color:blue;
+}
+/* ********************************************************************************************************************************************** */
+                                                            /* inherit*/
+
+body{
+    font-family:arial;
+    color:red;
+}                   
+
+a{
+    /* inherit biar nanti a nya itu warna merah, jadi ga warna biru lagi(soalnya kan kalo a itu linknya pasti warna biru */
+    color:inherit;
+}
+/* ********************************************************************************************************************************************** */
+                                                            /* specifity*/
+
+/* id    - bebannya itu 100 (usahakan jangan make class, kalo emang ga diperlukan banget)*/
+/* class - bebannya 10 (mending make class dari pada make id, jadi banyakin make class aja)*/

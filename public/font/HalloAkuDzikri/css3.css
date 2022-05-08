@@ -1,0 +1,220 @@
+/* ********************************************************************************************************************************************** */
+                                                            /* border-radius */
+                                                    
+/* semakin besar value semakin tumpul ujung kotaknya */
+/*  border-radius : 10px (semua sudutnya tumpul) 
+    kalo mau lingkaran penuh kasih aja value 50%
+    
+    border-radius : 10px 20px 30px 40px (top, right, bottom, left)
+    
+    bisa juga..
+    border-top-right-radius: 10px
+    border-bottom-left-radius: 20px
+    
+    BREAKING NEWS : 
+    background-repeat: no repeat (biar gambar ka berulang)
+    background-size: cover (biar gambarnya memenuhi elemen)*/
+/* ********************************************************************************************************************************************** */
+                                                            /* opacity*/
+/* opacity: 1 (solid)
+    opacity: 0 (transparan)
+    opacity: 0,5 (solid setengah transparan warnanya) */
+
+/*  INGAT! KITA GA BISA BIKIN SEBUAH ELEMEN CHILD ITU SOLID KETIKA ELEMEN PEMBUNGKUSNYA TRANSPARAN 
+    (KALO MAU SOLID MAKE RGB) */
+/* ********************************************************************************************************************************************** */
+                                                            /* rgba & hsla*/
+/* rgba(), a nya itu alpha atau ketransparanan */
+
+/* hsla(), h nya roda warna
+           s nya kereng atau mau memutih (dia make %)
+           l nya gelap terangnya (semakin besar value semakin terang)
+           a nya ketransparanan*/
+/* ********************************************************************************************************************************************** */
+                                                            /* box-shadow*/
+                                    
+/* box-shadow: x(horizontal, kalo "-" dia ke kiri) y(vertikal, kalo "-" ke atas) blur color */
+
+/*  ada optionalnya
+    box-shadow: inset(membuat bayangannya berada di dalam kotaknya) x y blur spread(ukuran blurnya) color*/
+
+/*  box-shadow juga bisa multiple shadow caranya tinggal di pisahin ama koma 
+    contoh:
+    
+    box-shadow: x y blur color,
+                x y blur color,
+                x y blur color*/
+/* ********************************************************************************************************************************************** */
+                                                            /* text-shadow */
+                                                    
+/* text-shadow itu kaya box-shadow, tapi kalo ini mah di text */
+/* text-shadow: x y blur color */
+/* ********************************************************************************************************************************************** */
+                                                            /* filter */
+/* filter adalah property css3 yang digunakan untuk memberikan efek visual pada gambar, background atau border */
+/*  filter
+    blur           (px)      = semakin besar semakin blur
+    brightness (angka | %)   = mengatur gelap terang, 0 gelap 1/100% (1 = 100% bray) terang
+    contrast   (angka | %)   = mengatur ke kerengan warna
+    saturate   (angka | %)   = mengatur ketajaman warna, semakin besar semakin tajam semakin kecil semakin mengabu abu
+    grayscale  (angka | %)   = mengatur abu abu
+    sepia      (angka | %)   = samkin besar semakin menguning
+    hue-rotate    (deg)      = merotasi roda warna
+    invert     (angka | %)   = mengatur kenegativan warna
+    opacity    (angka | %)   = opacity sama kaya yang sudah dipelajari 
+    drop-shadow (sama seperti box-shadow, ngisi value nya sama maksudnya */
+
+/* kalo ada kotak yang ada text di dalamnya
+    terus kita ngasih filter drop-shadow maka yang kena adalah textnya,
+    kalo mau yang kena kotaknya tinggal make box-shadow aja */
+/* ********************************************************************************************************************************************** */
+                                                            /* transform */
+                                                    
+/* property transform memungkinkan kita dapat memanipulasi format visual dari elemen HTML */
+/* transofrom: fungsinya/valuenya
+
+    fungsi/value transform ada : 
+    scale      (memperbesar)            = scale(angka), scaleX(angka), scaleY(angka)
+    rotate     (memutar)                = rotate(deg), rotateX(deg), rotateY(deg)
+    skew       (membuat condong/miring) = skew (deg), skewX(deg), skewY(deg)
+    translate  (mengubah posisi)        = translate(px), translateX(px), translateY(px)
+*/
+
+/*  scale(2) = dia akan memperbesar 2x lipat
+    scale(2,3) = horizontalnya memperbesar 2x lipat dan vertikal 3x lipat   
+    
+    rotate(40deg) = dia akan merotasi sebanyak 40 derajat)
+    bisa juga ditumpuk
+
+    skew(40deg) = dia akan condong horizontal sebanyak 40 derajat
+    skew sama skewX itu sama
+    skewY itu vertikal
+
+    translate(50px) = dia akan menggeser ke kanan 50px
+    bisa ditumpuk juga
+
+    property transform juga bisa ditumpuk
+    transform:scale(2), rotate(50deg)
+*/
+/* ********************************************************************************************************************************************** */
+                                                            /* transisi */
+
+/*  transisi itu ada keadaan awal dan keadaan akhir
+    kalo animasi itu banyak ke adaan, keadaan 1 2 3 dst.. */
+
+/*  transition: property(opsional) durasi(wajib) fungsi(opsional) delay(opsional) */
+
+.kotak{
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    transform: margin-left 1s;
+    /* nah ini kalo kita kasih property di transform (kalo diatas margin-left ya bray), maka elemen rotate dan background-color di bawah itu 
+        akan berubah secara instan
+        
+        beda kalo kita ga kasih property di transform, dia tidak akan instan, semua berjalan dengan smooth */
+}
+
+.container:hover .kotak{
+    /* CARA BACA: ketika container ter hover (disentuh) maka elemen kotaknya.. */
+    transform: rotate(45deg);
+    margin-left: 800px;
+    background-color: royalblue;
+}
+/* value fungsi : */
+/* ease                 – menentukan efek transisi dengan awal yang lambat, kemudian cepat, kemudian berakhir perlahan (ini adalah default)
+   linear               – menentukan efek transisi dengan kecepatan yang sama dari awal sampai akhir
+   ease-in              – menentukan efek transisi dengan awal yang lambat
+   ease-out             – menentukan efek transisi dengan akhir yang lambat
+   ease-in-out          – menentukan efek transisi dengan awal dan akhir yang lambat
+  cubic-bezier(n,n,n,n) – memungkinkan Anda menentukan nilai-nilai Anda sendiri dalam fungsi kubik-bezier  */
+
+/* delay - menentukan berapa detik atau milidetik yang diperlukan untuk penundaan efek transisi ( 5s untuk 5 detik dan 0.5 untuk 0,5 milidetik ). */
+/* ********************************************************************************************************************************************** */
+                                                            /* animation */
+/* animasi itu banyak ke adaan, keadaan 1 2 3 dst.. */
+/*  */
+
+/* CARA PENULISAN :  */
+.kotak{
+    animation: berubah; /* jadi nanti dia cuma panggil aja*/
+}
+@keyframes berubah {
+    from{background: royalblue;}
+    to{background: saddlebrown;}
+}
+
+/* kalo banyak ya kaya make persen */
+
+@keyframes berubah {
+    0%{background-color: saddlebrown;}
+    50%{background-color: salmon;}
+    75%{background-color: seagreen;}
+    100%{background-color: slateblue;}
+}
+
+/* animation-name = untuk membuat nama animasi itu sendiri yang akan dikaitkan pada @keyframes */
+/* animation-duration = untuk memberikan durasi pada animasi. */
+/* animation-delay = untuk menunda waktu animasi yang akan diputar dengan waktu yang telah ditentukan */
+/* animation-iteration-count = untuk menentukan berapa kali animasi harus dijalankan */
+
+/* animation-direction = untuk mengatur apakah arah animasi harus diputar ke depan, belakang atau dalam siklus alternatif 
+    - normal              = Animasi diputar seperti biasa (ke depan). Ini standar atau default
+    - reverse             = Animasi diputar dalam arah terbalik (mundur)
+    - alternate           = Animasi diputar terlebih dahulu, lalu mundur
+    - alternate-reverse   = Animasi diputar mundur lebih dulu, lalu maju*/
+
+/* value animation-timing-function : */
+/* ease                 – menentukan efek transisi dengan awal yang lambat, kemudian cepat, kemudian berakhir perlahan (ini adalah default)
+   linear               – menentukan efek transisi dengan kecepatan yang sama dari awal sampai akhir
+   ease-in              – menentukan efek transisi dengan awal yang lambat
+   ease-out             – menentukan efek transisi dengan akhir yang lambat
+   ease-in-out          – menentukan efek transisi dengan awal dan akhir yang lambat
+    cubic-bezier(n,n,n,n) – memungkinkan Anda menentukan nilai-nilai Anda sendiri dalam fungsi kubik-bezier  */
+
+/*  fill-mode itu untuk menentukan AKHIR dari animasinya seperti apa, berikut adalah value dari fill-mode
+
+    none      = Nilai standar. Animasi tidak akan menerapkan gaya apa pun pada elemen sebelum atau setelah dijalankan
+    forwards  = Elemen akan mempertahankan nilai style yang diatur oleh keyframe terakhir (tergantung pada animation-direction dan 
+    animation-iteration-count)
+
+    backwards = Elemen akan mendapatkan nilai gaya yang diatur oleh keyframe pertama (tergantung pada animation-direction),
+    dan mempertahankan ini selama periode penundaan animasi atau animation-delay
+
+    both      = Animasi akan mengikuti aturan untuk maju dan mundur, memperluas properti animasi di kedua arah */
+
+/* CARA MENUMPUK:
+    animation: [name] [durasai] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state] */
+/* ********************************************************************************************************************************************** */
+                                                            /* font face */
+
+/* font-family */
+.kotak{
+    font-family:"arial narrow", arial, sans-serif;
+    /* CARA BACA: kalo arial ga ada, dia arial, dan kalo arial juga ga ada dia sans-serif fontnya */
+}
+
+/* google font */
+/*  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> */
+
+/* script diatas ditaro di head html, kalo udah nanti di file style css nya tulis.. */
+
+/* font-family: 'Poppins', sans-serif; */
+
+/* @font-face */
+/* woff itu font khusus untuk web */
+
+@font-face{
+    font-family:"Nobile";
+    src:url('Nobile-Regular.ttf') format('truetype');
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    font-family: "Nobile", arial, helvetica, sans-serif;
+}
+
+/* jadi font-face itu, kita download dulu abis itu kita deklarasikan make @font-face abis itu baru bisa dipake, make property font-family */

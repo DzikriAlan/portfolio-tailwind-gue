@@ -1,0 +1,106 @@
+/* ********************************************************************************************************************************************** */
+                                                            /* display*/
+
+/* inline       = ga maruk (dia ngasih ruang buat elemen yang lain) 
+                = b, strong, i, em, a, span, sub, sup, button, input, label, select, text-area*/
+
+/* block        = maruk (dia nguasain penuh ruang, satu baris penuh) 
+                = h1-h6, p, ol, ul, li, form, hr, div*/
+
+/* inline-block = sama kaya inline, cuma kalo inline-block dapat diatur tinggi dan lebarnya (GA MARUK)*/
+
+/* CARA PENULISAN : display: inline/block/inline-block; */
+
+/* ********************************************************************************************************************************************** */
+                                                            /* dimensi (width, height, px, %)*/
+                                                    
+/*  width  = lebar
+    height = tinggi
+    px     = absolute(dia satuan yang pasti)
+    %      = relative (dia satuan yang relative (mengikuti parentnya) */
+
+/* ********************************************************************************************************************************************** */
+                                                            /* overflow*/
+
+/* visible = default dari overflow */
+/* auto    = kalo tulisannya banyak nanti dia akan auto untuk membuat scrollan, tapi kalo ga banyak dan overflownya auto dia ga ada scrollannya */
+/* hidden  = dia akan menyembunyikan sesuatu yang keluar dari elemennya (pembungkusnya)*/
+/* scroll  = mau tulisannya banyak atau nggak, kalo value dari overflownya scroll maka dia ada BEKAS scroll annya  */
+
+/* ********************************************************************************************************************************************** */
+                                                            /* margin*/
+/* CARA PENULISAN
+    margin : 10px 20px 30px 40px (atas, kanan, bawah, kiri)
+    margin : 10px 20px 30px (atas, kiri kanan, bawah)
+    margin : 10px 30px (atas bawah 10, kiri kanan 30)
+    margin : 10px (atas kanan bawah kiri nilainya 10)
+    margin-top, margin-right dsb.. */
+
+/* untuk inline dan inline block, kalo overlapping margin yang diambil adalah yang terbesar (itu kalo vertikal), nah kalo horizontal itu ditambah
+    contohnya margin-left div 1 10px, margin-right div 2 20px. nah berari jarak keduanya itu jauhnya 30px karena 10 ditambah 20 */
+
+/* margin juga bisa make value negative = misalnya -10 px  */
+
+/* auto contohnya itu kaya gini, margin-left:auto; margin-right:auto; berarti nanti elemennya ada ditengah tengah karena kitakan make value auto */
+
+/* ********************************************************************************************************************************************** */
+                                                            /* Padding border */
+                                                    
+/* margin  : area transparan di sekitar kotak (diluar border)*/
+
+/* padding : area transparan di dalam kotak (antara content dan border)*/
+/* padding tidak bisa dikasih nilai negative dan auto. cara penulisannya sama kaya margin. ingat padding akan memperbesar elemennya (kotaknya) */
+
+/* border  : batas di sekeliling content dan padding */
+/* CARA PENULISAN : border : 5px solid black (ketebalan, jenis garis, warna)
+    - solid  : garis tebal
+    - dotted : titik2
+    - dashed : garis putus putus 
+    - dobule : garis tebalnya ada 
+
+    border juga menambah ukuran kotaknya (sama seperti padding)
+*/
+
+/* content : konten sebenarnya di dalam bos, bisa berupa teks atau gambar */
+/* ********************************************************************************************************************************************** */
+                                                            /* box-sizing*/
+                                                        
+/* box-sizing dengan nilai border box, itu akan membuat kotaknya tetap sama walaupun nanti padding nya lebih besar nilainya dari pada kotaknya */
+/* ********************************************************************************************************************************************** */
+                                                            /* float */
+                                                        
+/* float untuk mengatur posisi elemen, mau ke kanan atau ke kiri dari parent/pembungkusnya */
+/* float itu valuenya ada : none (defaultnya), right, left */
+/* float biasanya digunakan saat : 
+    text-wrapping       = membuat teks mengelilingi gambar/elemen lain
+    image gallery       = membut serangkaian gambar menjadi galeri
+    multi-column layout = membuat halaman memiliki beberapa kolom */
+/* ********************************************************************************************************************************************** */
+                                                            /* clear */
+
+/* clear itu untuk membersihkan hal yang tidak di inginkan di elemen float, contohnya elemen yang kolaps. karena sudah tidak menganggap elemen
+    float */
+/* clear : left/right/both(left dan right) */
+/* ********************************************************************************************************************************************** */
+                                                            /* static dan relative */
+
+/* static itu defaultnya */
+/* INGAT ELEMEN SELAIN STATIC DAPAT MENGGUNAKAN TOP LEFT BOTTOM RIGHT UNTUK MENGATUR POSISI ELEMEN */
+/* relative itu  maju 1 dimensi dari elemen lainnya, dan relative itu bekasnya (tempat dia berada sebelumnya itu masih ada)*/
+/* relative itu biasanya dipakai hanya untuk membuat si elemen itu maju 1 dimensi saja, kalo mau ngautur elemen mah make absolute */
+/* ********************************************************************************************************************************************** */
+                                                            /* absolute dan fixed */
+
+/* absolute itu maju 1 dimensi, cuma nanti dia bekasnya udah ga ada lagi (jadi bekasnya itu otomatis bisa untuk di isi sama elemen lain */
+/* absolute itu relative terhadap elemen parentnya (kalo ngubah posisinya) */
+/* jadi kalo misalkan ngasih top : 100px, maka dia ngitung 100px nya dari atas layar (yaitu si parentnya) */
+/* kalau masih bingung, coba nanti kasih top 0 dan leftnya 0 */
+
+/* INGAT! ketika kita menggerakkan elemen dengan posisi absolute, elemen akan bergerak relatif terhadap posisi dari elemen parent-nya,
+    SELAMA ELEMEN PARENT-NYA MEMILIKI POSISI YANG JUGA NON-STATIC (BIAR NYANGKUT NANTINYA BRAY) */
+/* dan INGAT JUGA! dia berlaku terhadap elemen pembungkus terdekatnya (karena ya siapa tau elemen pembungkusnya bersarang yakan?)*/
+
+/* fixed itu relative terhadap window, dan fixed juga dia itu biasanya digunakan biar elemennya ga ikut bergerak ketika di scroll */
+/* ********************************************************************************************************************************************** */
+                                                            /* z index */
+/* z-index untuk mengatur tumpukkan (apakah dia mau paling depan atau paling belakang) */
