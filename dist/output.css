@@ -510,7 +510,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: fixed;
   z-index: 9999;
   width: 100%;
-  border-width: 2px;
   background-color: transparent;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.8;
